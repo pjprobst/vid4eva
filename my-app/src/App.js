@@ -1,22 +1,39 @@
 //App.js
+import './App.css';
 import Select from "react-select";
+import React, { useState, useEffect } from "react";
 
 // Import Bootstarp CSS
-import "bootstrap/dist/css/bootstrap.css";
-
 const App = () => {
   const options = [
-    { value: "blues", label: "Blues" },
-    { value: "rock", label: "Rock" },
-    { value: "jazz", label: "Jazz" },
-    { value: "orchestra", label: "Orchestra" },
+    { value: "Downtown Naperville", label: "Downtown Naperville" },
+    { value: "Downtown Yorkville", label: "Downtown Yorkville" },
+    { value: "South Naperville", label: "South Naperville" },
+    { value: "Downtown Oswego", label: "Downtown Oswego" },
   ];
   return (
-    <div className="container">
-      <div className="mt-5 m-auto w-50">
+    <div className="App">
+      <div className="App-header">
           <h>Video4Ever Branch Inventory</h>
           <p>Choose a branch to view the branch inventory.</p>
-        <Select options={options} />
+        <Select 
+          styles={{
+            control: (provided, state) => ({
+              ...provided,
+              boxShadow: "none",
+              border: "none",
+              backgroundColor: "white",
+              color: "#000000",
+              width:"112%"
+            }),
+            option: (provided, state) => ({
+              ...provided,
+              backgroundColor: "white",
+              color: "#000000",
+              width:"112%"
+            })
+          }}
+        options={options} />
       </div>
     </div>
   );
