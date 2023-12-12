@@ -11,12 +11,13 @@ const App = () => {
     { value: "South Naperville", label: "South Naperville" },
     { value: "Downtown Oswego", label: "Downtown Oswego" },
   ];
+  
   return (
     <div className="App">
       <div className="App-header">
           <h>Video4Ever Branch Inventory</h>
           <p>Choose a branch to view the branch inventory.</p>
-        <Select 
+        <Select
           styles={{
             control: (provided, state) => ({
               ...provided,
@@ -35,6 +36,28 @@ const App = () => {
           }}
         options={options} />
       </div>
+      <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+        </tr>
+        <tr>
+            <td>Anom</td>
+            <td>19</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>Megha</td>
+            <td>19</td>
+            <td>Female</td>
+        </tr>
+        <tr>
+            <td>Subham</td>
+            <td>25</td>
+            <td>Male</td>
+        </tr>
+    </table>
     </div>
   );
 };
